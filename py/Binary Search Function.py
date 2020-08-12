@@ -1,7 +1,7 @@
 #Implement a Binary Search Function
 
 
-#What is it, a method for searching through an ordered list of numerical objects for a given item
+#What is it, an algorithm for searching through an ordered list of numerical objects for a given item
 import time
 
 def binary_search(value):
@@ -18,14 +18,17 @@ def binary_search(value):
         if list[mid] == value:
             return "At Position: " + str(mid)
         elif list[mid] >= value:
-            end = mid
+            end = mid - 1
             mid = int((beginning + end)/2)
         elif list[mid] <= value:
-            beginning = mid
+            beginning = mid + 1
             mid = int((beginning + end)/2)
     return "Not in list"
 
 print(binary_search(2102))
-
+print(binary_search(25))
+print(binary_search(0))
+print(binary_search(56))
+print(binary_search(15563561))
 
 
