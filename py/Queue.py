@@ -7,7 +7,7 @@ Utilizing the LinkedList class to store the connect between each element
 
 
 
-"""
+
 
 
 class Element:
@@ -57,3 +57,15 @@ my_queue.append(element_two)
 my_queue.append(element_seven)
 print(my_queue)
 
+"""
+
+def int_to_str(num):
+    string_number = ""
+    number_list = []
+    number_list.append(num)
+    number_list.insert(0,"'")
+    number_list.insert(2, "'")
+    return string_number.join(number_list)
+
+number = 312
+int_to_str(number)
