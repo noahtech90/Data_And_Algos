@@ -21,8 +21,11 @@ def binary_search(value):
     while end >= beginning:
         print(mid)
         time.sleep(1)
+        #Return the position if value matches our goal
         if list[mid] == value:
             return "At Position: " + str(mid)
+
+        #Eliminate the half of the list we know our value is not in
         elif list[mid] >= value:
             end = mid - 1
             mid = int((beginning + end)/2)
