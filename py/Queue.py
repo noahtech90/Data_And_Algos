@@ -5,10 +5,7 @@ First in, first out
 
 Utilizing the LinkedList class to store the connect between each element
 
-
-
-
-
+"""
 
 class Element:
 
@@ -35,14 +32,28 @@ class LinkedList:
         return str(all_elements)
 
     def append(self, new_element):
-
         if not self.head:
             self.head = new_element
         else:
+            previous = self.head
+            self.head = new_element
+            new_element.next = previous
+
+    def pop(self):
+        current = self.head
+        if current.next:
             current = self.head
             while current.next:
+                previous = current
                 current = current.next
-            current.next = new_element
+            previous.next = None
+
+        elif current is not None:
+            self.head = None
+        else:
+            return print("No elements in list")
+
+
 
 element_one = Element(1)
 element_two = Element(2)
@@ -54,18 +65,9 @@ my_queue = LinkedList()
 my_queue.append(element_four)
 my_queue.append(element_one)
 my_queue.append(element_two)
+my_queue.pop()
+my_queue.pop()
+my_queue.pop()
 my_queue.append(element_seven)
 print(my_queue)
 
-"""
-
-def int_to_str(num):
-    string_number = ""
-    number_list = []
-    number_list.append(num)
-    number_list.insert(0,"'")
-    number_list.insert(2, "'")
-    return string_number.join(number_list)
-
-number = 312
-int_to_str(number)
