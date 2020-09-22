@@ -39,7 +39,7 @@ class LinkedList:
             self.head = new_element
             new_element.next = previous
 
-    def pop(self):
+    def remove(self):
         current = self.head
         if current.next:
             current = self.head
@@ -53,7 +53,11 @@ class LinkedList:
         else:
             return print("No elements in list")
 
-
+    def peek(self):
+        current = self.head
+        while current.next:
+            current = current.next
+        return current.value
 
 element_one = Element(1)
 element_two = Element(2)
@@ -62,12 +66,14 @@ element_seven = Element(7)
 
 my_queue = LinkedList()
 
-my_queue.append(element_four)
 my_queue.append(element_one)
 my_queue.append(element_two)
-my_queue.pop()
-my_queue.pop()
-my_queue.pop()
 my_queue.append(element_seven)
+my_queue.append(element_four)
+
 print(my_queue)
+print(my_queue.peek())
+my_queue.remove()
+print(my_queue)
+print(my_queue.peek())
 
