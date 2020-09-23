@@ -1,4 +1,10 @@
-"""Practice Linked Lists"""
+"""
+Linked List: List of elements which contain both a value and a
+pointer to the next elements
+
+Can be implemented in a variety of ways (queue, stack, etc)
+
+"""
 
 class Element(object):
     def __init__(self, value):
