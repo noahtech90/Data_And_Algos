@@ -28,8 +28,11 @@ class BST {
             }
         }
     }
-
-
-
-
 }
+
+
+
+function addMe(i) {
+    print(i + 1)
+}
+alert(3)
