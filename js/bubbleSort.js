@@ -1,3 +1,11 @@
+
+/*Sorting Algorithm, not used much in the real world
+
+search through all possible pairs and swap 
+
+if value to the right is less than
+
+*/
 let bubbleSort = (inputArr) => {
     let len = inputArr.length;
     for (let i = 0; i < len; i++) {
