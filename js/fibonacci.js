@@ -1,3 +1,5 @@
+
+// Recursive solution for fibonacci sequence
 function fib(num) {
     if (num <=2) {
         return num
