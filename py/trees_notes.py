@@ -38,4 +38,15 @@ BFS: Breadth First Search
 """
 Binary Tree
 
+Search and Delete:
+
+This can be simple if you are deleting a node with only one child
+but can become trick if your deleted node has many ancestors as 
+you need to move the descendants up to maintain a connected tree
+
+Insert:
+
+
+
 """
+
