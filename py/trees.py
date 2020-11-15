@@ -25,11 +25,14 @@ class BinaryTree(object):
 
     def preorder_print(self, start, traversal):
         if start:
+            if start.left:
+                traversal.append(start.value)
+                return self.preorder_print(start.left, traversal)
+            elif start.right:
+                traversal.append(start.value)
+                return self.preorder_print(start.right, traversal)
             traversal.append(start.value)
-            if not start.left or not start.right:
-                return traversal
-            else:
-                return self.preorder_print(start.left, traversal) or self.preorder_print(start.right, traversal)
+        return traversal
 # Set up tree
 tree = BinaryTree(1)
 tree.root.left = Node(2)
